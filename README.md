@@ -6,17 +6,21 @@ Aplicação interativa desenvolvida em Python + Streamlit para análise e proje�
 Python
 Streamlit
 Pandas/Openpyxl
+
+
 📊 Funcionalidades
 Visualização de gols por temporada
 Cálculo de média de gols
 Projeção do milésimo gol
 Simulação de cenários
+
+
 📁 Fonte de dados
 ESPN
+
+
 🎯 Objetivo
-
 Demonstrar habilidades em:
-
 Análise de dados
 Visualização interativa
 Desenvolvimento de dashboards
