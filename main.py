@@ -26,7 +26,8 @@ with st.sidebar:
     dados = df[df["Clube"] == clube]
     st.metric("Gols", dados["Gols"].sum())
     st.metric("Jogos", dados["Jogos"].sum())
-    st.metric("Média", dados["Gols"].mean())
+    media = dados["Gols"].sum() / dados["Jogos"].sum()
+    st.metric("Média",f"{media:.2f}")
     
 st.title("Meta : 1.000 Gols")
 
