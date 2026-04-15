@@ -32,5 +32,5 @@ st.title("Meta : 1.000 Gols")
 st.metric("Gols",df["Gols"].sum())
 st.metric("Jogos", df["Jogos"].sum())
 
-img = "//home/gustavo/Área de trabalho/cristiano-ronaldo/img"    
+img = r"img/Cristiano-Ronaldo-No-Background.png"    
 st.image(img)
