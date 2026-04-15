@@ -2,8 +2,6 @@ import pandas as pd
 import streamlit as st 
 import openpyxl , plotly , lxml
 
-img = "/home/gustavo/Área de trabalho/cristiano-ronaldo/Cristiano-Ronaldo-No-Background.png"
-
 # url = r"https://www.365scores.com/pt-br/news/magazine/quantos-gols-cristiano-ronaldo-tem-na-carreira/"
 
 #table = pd.read_html(url)
@@ -34,5 +32,5 @@ st.title("Meta : 1.000 Gols")
 st.metric("Gols",df["Gols"].sum())
 st.metric("Jogos", df["Jogos"].sum())
 
-    
+img = "//home/gustavo/Área de trabalho/cristiano-ronaldo/img"    
 st.image(img)
