@@ -4,18 +4,19 @@ import openpyxl , plotly , lxml
 
 # url = r"https://www.365scores.com/pt-br/news/magazine/quantos-gols-cristiano-ronaldo-tem-na-carreira/"
 
-#table = pd.read_html(url)
-#tabela = pd.DataFrame(table[0],index=None)
+#url_calendario = "https://www.espn.com.br/futebol/time/calendario/_/id/817"
 
-#tabela.to_excel("dados.xlsx")
+url_portugal = "https://www.espn.com.br/futebol/time/calendario/_/id/482/por"
 
-import pandas as pd
-import streamlit as st
 
-df = pd.read_excel("dados.xlsx")
+table = pd.read_html(url_portugal)
+tabela = pd.DataFrame(pd.concat([table[0],table[1],table[2],table[3]]),index=None)
 
-import pandas as pd
-import streamlit as st
+tabela.to_excel("calendario_portugal.xlsx")
+
+calendario = pd.read_excel("calendario.xlsx")
+calendario_portugal = pd.read_excel("calendario_portugal.xlsx")
+
 
 df = pd.read_excel("dados.xlsx")
 
@@ -31,6 +32,10 @@ st.title("Meta 🥇: 1.000 Gols")
 
 st.metric("Gols ⚽️",df["Gols"].sum())
 st.metric("Jogos 🥅", df["Jogos"].sum())
+if st.button("Al-Nassr"):
+    st.table(calendario)
+if st.button("Portugal"):
+    st.table(calendario_portugal)
 
 img = r"img/Cristiano-Ronaldo-No-Background.png"    
 st.image(img)
