@@ -32,10 +32,18 @@ st.title("Meta 🥇: 1.000 Gols")
 
 st.metric("Gols ⚽️",df["Gols"].sum())
 st.metric("Jogos 🥅", df["Jogos"].sum())
-if st.button("Al-Nassr"):
-    st.table(calendario)
-if st.button("Portugal"):
-    st.table(calendario_portugal)
 
+opcao = st.selectbox(
+    "Calendário",
+    ["Al-Nassr", "Portugal"],
+    index=None,
+    placeholder="Selecione um time"
+)
+
+if opcao == "Al-Nassr":
+    st.table(calendario)
+elif opcao == "Portugal":
+    st.table(calendario_portugal)
+    
 img = r"img/Cristiano-Ronaldo-No-Background.png"    
 st.image(img)
