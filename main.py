@@ -27,7 +27,7 @@ with st.sidebar:
     st.metric("Média 📊",f"{media:.2f}")
 
 st.title("Meta 🥇: 1.000 Gols")
-st.image(url_imagem,width="content")
+st.image(url_imagem,width=250)
 st.metric("Gols ⚽️",df["Gols"].sum())
 st.metric("Jogos 🥅", df["Jogos"].sum())
 st.metric("Posição 🎯","Atacante")
