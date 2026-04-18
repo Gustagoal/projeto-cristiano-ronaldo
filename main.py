@@ -30,7 +30,7 @@ st.title("Meta 🥇: 1.000 Gols")
 st.image(url_imagem,width="content")
 st.metric("Gols ⚽️",df["Gols"].sum())
 st.metric("Jogos 🥅", df["Jogos"].sum())
-st.metric("Posição 7️⃣","Atacante")
+st.metric("Posição 🎯","Atacante")
 st.metric("Idade 🪪" , "41 anos")
 st.metric("Nacionalide 🇵🇹"," Portugal")
 
