@@ -3,7 +3,7 @@ import streamlit as st
 import openpyxl , plotly , lxml
 
 #url_portugal = "https://www.espn.com.br/futebol/time/calendario/_/id/482/por"
-
+url_imagem = "img/png-clipart-cristiano-ronaldo-cristiano-ronaldo-portugal-national-football-team-real-madrid-c-f-fifa-confederations-cup-football-player-portuguese-tshirt-sport-removebg-preview.png"
 
 
 #table = pd.read_html(url_portugal)
@@ -27,13 +27,15 @@ with st.sidebar:
     st.metric("Média 📊",f"{media:.2f}")
 
 st.title("Meta 🥇: 1.000 Gols")
+st.image(url_imagem,width="content")
 st.metric("Gols ⚽️",df["Gols"].sum())
 st.metric("Jogos 🥅", df["Jogos"].sum())
-img = r"img/Cristiano-Ronaldo-No-Background.png"
-st.image(img,width=400)
+st.metric("Posição 7️⃣","Atacante")
+st.metric("Idade 🪪" , "41 anos")
+st.metric("Nacionalide 🇵🇹"," Portugal")
 
 opcao = st.selectbox(
-"Calendário",
+"Calendário 📆",
 ["Al-Nassr", "Portugal"],
 index=None,
 placeholder="Selecione um time"
